@@ -21,3 +21,9 @@ discovery.type: single-node
 ##CORS Setting
 http.cors.enabled: true
 http.cors.allow-origin: "*"
+
+#Which origins to allow. 
+# If you prepend and append a forward slash (/) to the value, 
+# this will be treated as a regular expression, allowing you to support HTTP and HTTPs.
+# For example, using /https?:\/\/localhost(:[0-9]+)?/ would return 
+# the request header appropriately in both cases. Defaults to no origins allowed.
