@@ -16,3 +16,8 @@ xpack.monitoring.collection.enabled: true
 ## see https://www.elastic.co/guide/en/elasticsearch/reference/current/bootstrap-checks.html
 #
 discovery.type: single-node
+
+
+##CORS Setting
+http.cors.enabled: true
+http.cors.allow-origin: "*"
