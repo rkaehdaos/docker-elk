@@ -1,0 +1,98 @@
+curl -XPUT http://localhost:9200/goods -d '
+{
+  "settings": {
+    "index": {
+      "analysis": {
+        "analyzer": {
+          "ttukttak": {
+            "type": "nori",
+            "stopwords": "_korean_"
+          }
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "@timestamp": {
+        "type": "date"
+      },
+      "@version": {
+        "type": "text",
+        "analyzer": "ttukttak",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "default_consumer_price": {
+        "type": "long"
+      },
+      "default_discount": {
+        "type": "long"
+      },
+      "default_price": {
+        "type": "long"
+      },
+      "goods_name": {
+        "type": "text",
+        "analyzer": "ttukttak",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "goods_seq": {
+        "type": "long"
+      },
+      "goods_status": {
+        "type": "text",
+        "analyzer": "ttukttak",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "image": {
+        "type": "text",
+        "analyzer": "ttukttak",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "keyword": {
+        "type": "text",
+        "analyzer": "ttukttak",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "sale_rate": {
+        "type": "long"
+      },
+      "summary": {
+        "type": "text",
+        "analyzer": "ttukttak",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      }
+    }
+  }
+}
+' -H 'Content-Type: application/json'
