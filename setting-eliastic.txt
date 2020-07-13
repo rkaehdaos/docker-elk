@@ -14,19 +14,6 @@ curl -XPUT http://localhost:9200/goods -d '
   },
   "mappings": {
     "properties": {
-      "@timestamp": {
-        "type": "date"
-      },
-      "@version": {
-        "type": "text",
-        "analyzer": "ttukttak",
-        "fields": {
-          "keyword": {
-            "type": "keyword",
-            "ignore_above": 256
-          }
-        }
-      },
       "default_consumer_price": {
         "type": "long"
       },
@@ -38,59 +25,28 @@ curl -XPUT http://localhost:9200/goods -d '
       },
       "goods_name": {
         "type": "text",
-        "analyzer": "ttukttak",
-        "fields": {
-          "keyword": {
-            "type": "keyword",
-            "ignore_above": 256
-          }
-        }
+        "analyzer": "ttukttak"
       },
       "goods_seq": {
         "type": "long"
       },
       "goods_status": {
         "type": "text",
-        "analyzer": "ttukttak",
-        "fields": {
-          "keyword": {
-            "type": "keyword",
-            "ignore_above": 256
-          }
-        }
+        "analyzer": "ttukttak"
       },
       "image": {
-        "type": "text",
-        "analyzer": "ttukttak",
-        "fields": {
-          "keyword": {
-            "type": "keyword",
-            "ignore_above": 256
-          }
-        }
+        "type": "keyword"
       },
       "keyword": {
         "type": "text",
-        "analyzer": "ttukttak",
-        "fields": {
-          "keyword": {
-            "type": "keyword",
-            "ignore_above": 256
-          }
-        }
+        "analyzer": "ttukttak"
       },
       "sale_rate": {
         "type": "long"
       },
       "summary": {
         "type": "text",
-        "analyzer": "ttukttak",
-        "fields": {
-          "keyword": {
-            "type": "keyword",
-            "ignore_above": 256
-          }
-        }
+        "analyzer": "ttukttak"
       }
     }
   }
