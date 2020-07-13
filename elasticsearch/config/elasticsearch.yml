@@ -39,7 +39,10 @@ http.cors.allow-origin: "*"
 
 # 스키마리스 기능을 명시적으로 사용하지 않도록 한다.
 # - 자동 인덱스 생성 방지
-action.auto_create_index: false
+# action.auto_create_index: false
+# - 다 막으면 xpack-watcher가 작동안함
+action.auto_create_index: ".watches,.triggered_watches,.watcher-history-*"
+
 # - 특정 칼럼 자동매핑 생성 비활성화
 index.mapper.dynamic: false
 
