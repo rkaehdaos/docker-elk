@@ -43,7 +43,5 @@ http.cors.allow-origin: "*"
 # - 다 막으면 xpack-watcher가 작동안함
 action.auto_create_index: ".watches,.triggered_watches,.watcher-history-*"
 
-# - 특정 칼럼 자동매핑 생성 비활성화
-index.mapper.dynamic: false
 
 
