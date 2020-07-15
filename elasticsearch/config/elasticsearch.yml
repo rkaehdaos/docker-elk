@@ -41,7 +41,7 @@ http.cors.allow-origin: "*"
 # - 자동 인덱스 생성 방지
 # action.auto_create_index: false
 # - 다 막으면 xpack-watcher가 작동안함
-action.auto_create_index: ".watches,.triggered_watches,.watcher-history-*"
+action.auto_create_index: ".watches,.triggered_watches,.watcher-history-*,.monitoring-es-*"
 
 
 
