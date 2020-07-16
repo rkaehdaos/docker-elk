@@ -16,14 +16,17 @@ curl -XPUT http://localhost:9200/goods -d '
     "properties": {
       "default_consumer_price": {
         "type": "long",
+        "norms": false,
         "enabled": false
       },
       "default_discount": {
         "type": "long",
+        "norms": false,
         "enabled": false
       },
       "default_price": {
         "type": "long",
+        "norms": false,
         "enabled": false
       },
       "goods_name": {
@@ -32,6 +35,7 @@ curl -XPUT http://localhost:9200/goods -d '
       },
       "goods_seq": {
         "type": "long",
+        "norms": false,
         "enabled": false
       },
       "goods_status": {
@@ -40,6 +44,7 @@ curl -XPUT http://localhost:9200/goods -d '
       },
       "image": {
         "type": "keyword",
+        "norms": false,
         "enabled": false
       },
       "keyword": {
@@ -48,6 +53,7 @@ curl -XPUT http://localhost:9200/goods -d '
       },
       "sale_rate": {
         "type": "long",
+        "norms": false,
         "enabled": false
       },
       "summary": {
