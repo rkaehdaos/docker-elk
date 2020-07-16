@@ -15,40 +15,34 @@ curl -XPUT http://localhost:9200/goods -d '
   "mappings": {
     "properties": {
       "default_consumer_price": {
-        "type": "long",
-        "enabled": false
+        "type": "long"
       },
       "default_discount": {
-        "type": "long",
-        "enabled": false
+        "type": "long"
       },
       "default_price": {
-        "type": "long",
-        "enabled": false
+        "type": "long"
       },
       "goods_name": {
         "type": "text",
         "analyzer": "ttukttak"
       },
       "goods_seq": {
-        "type": "long",
-        "enabled": false
+        "type": "long"
       },
       "goods_status": {
         "type": "text",
         "analyzer": "ttukttak"
       },
       "image": {
-        "type": "keyword",
-        "enabled": false
+        "type": "keyword"
       },
       "keyword": {
         "type": "text",
         "analyzer": "ttukttak"
       },
       "sale_rate": {
-        "type": "long",
-        "enabled": false
+        "type": "long"
       },
       "summary": {
         "type": "text",
