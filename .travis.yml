@@ -28,7 +28,7 @@ before_script:
 script:
   # Core Elastic Stack
   - docker-compose up -d elasticsearch
-  - sleep 60
+  - sleep 30
   - .travis/elasticsearch-setup-passwords.exp
   - docker-compose up -d
   - .travis/run-tests-core.sh

@@ -14,16 +14,11 @@ services:
       - type: volume
         source: elasticsearch
         target: /usr/share/elasticsearch/data
-      # TimeZone
-      - type: bind
-        source: /etc/localtime
-        target: /etc/localtime
-        read_only: true
     ports:
       - "9200:9200"
       - "9300:9300"
     environment:
-      ES_JAVA_OPTS: "-Xmx512m -Xms512m"
+      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
       ELASTIC_PASSWORD: changeme
       # Use single node discovery in order to disable production mode and avoid bootstrap checks
       # see https://www.elastic.co/guide/en/elasticsearch/reference/current/bootstrap-checks.html
@@ -45,16 +40,6 @@ services:
         source: ./logstash/pipeline
         target: /usr/share/logstash/pipeline
         read_only: true
-      # MySql Connector Appended
-      - type: bind
-        source: ./logstash/MySQL_connector/mysql-connector-java-8.0.20.jar
-        target: /lib/mysql-connector-java-8.0.20.jar
-        read_only: true
-      # TimeZone
-      - type: bind
-        source: /etc/localtime
-        target: /etc/localtime
-        read_only: true
     ports:
       - "5000:5000/tcp"
       - "5000:5000/udp"
@@ -75,11 +60,6 @@ services:
       - type: bind
         source: ./kibana/config/kibana.yml
         target: /usr/share/kibana/config/kibana.yml
-        read_only: true
-      # TimeZone
-      - type: bind
-        source: /etc/localtime
-        target: /etc/localtime
         read_only: true
     ports:
       - "5601:5601"
