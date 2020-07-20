@@ -3,45 +3,11 @@
 ## https://github.com/elastic/elasticsearch/blob/master/distribution/docker/src/docker/config/elasticsearch.yml
 #
 cluster.name: "docker-cluster"
-
-# 0.0.0.0 : devlop mode
-# 127.0.0.1 : product mode
 network.host: 0.0.0.0
 
 ## X-Pack settings
 ## see https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-xpack.html
 #
 xpack.license.self_generated.type: trial
-#xpack.security.enabled: true
+xpack.security.enabled: true
 xpack.monitoring.collection.enabled: true
-
-## Use single node discovery in order to disable production mode and avoid bootstrap checks
-## see https://www.elastic.co/guide/en/elasticsearch/reference/current/bootstrap-checks.html
-#
-discovery.type: single-node
-
-
-##CORS Setting
-http.cors.enabled: true
-http.cors.allow-origin: "*"
-
-#Which origins to allow. 
-# If you prepend and append a forward slash (/) to the value, 
-# this will be treated as a regular expression, allowing you to support HTTP and HTTPs.
-# For example, using /https?:\/\/localhost(:[0-9]+)?/ would return 
-# the request header appropriately in both cases. Defaults to no origins allowed.
-
-
-#default
-# http.port : 9200
-# transport.tcp.port : 9300
-
-
-# 스키마리스 기능을 명시적으로 사용하지 않도록 한다.
-# - 자동 인덱스 생성 방지
-# action.auto_create_index: false
-# - 다 막으면 xpack-watcher가 작동안함
-action.auto_create_index: ".watches,.triggered_watches,.watcher-history-*,.monitoring-*"
-
-
-

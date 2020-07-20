@@ -5,10 +5,3 @@ FROM docker.elastic.co/logstash/logstash:${ELK_VERSION}
 
 # Add your logstash plugins setup here
 # Example: RUN logstash-plugin install logstash-filter-json
-
-#RUN logstash-plugin install logstash-input-jdbc
-
-USER root
-RUN ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
-
-
