@@ -11,3 +11,23 @@ network.host: 0.0.0.0
 xpack.license.self_generated.type: trial
 xpack.security.enabled: true
 xpack.monitoring.collection.enabled: true
+
+## Use single node discovery in order to disable production mode and avoid bootstrap checks
+## see https://www.elastic.co/guide/en/elasticsearch/reference/current/bootstrap-checks.html
+#
+discovery.type: single-node
+
+##CORS Setting
+http.cors.enabled: true
+http.cors.allow-origin: "*"
+
+#Which origins to allow. 
+# If you prepend and append a forward slash (/) to the value, 
+# this will be treated as a regular expression, allowing you to support HTTP and HTTPs.
+# For example, using /https?:\/\/localhost(:[0-9]+)?/ would return 
+# the request header appropriately in both cases. Defaults to no origins allowed.
+
+
+#default
+# http.port : 9200
+# transport.tcp.port : 9300
