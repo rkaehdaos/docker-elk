@@ -51,4 +51,4 @@ curl -XPUT http://localhost:9200/goods -d '
     }
   }
 }
-' -H 'Content-Type: application/json'
+' -H 'Content-Type: application/json' -H "Authorization: Basic `echo -n elastic:changeme | base64`"
