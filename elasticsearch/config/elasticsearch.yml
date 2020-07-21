@@ -22,8 +22,9 @@ discovery.type: single-node
 ##CORS Setting
 http.cors.enabled: true
 http.cors.allow-origin: "*"
+# http.cors.allow-origin: /https?:\/\/localhost(:[0-9]+)?/
 http.cors.allow-methods: OPTIONS, HEAD, GET, POST, PUT, DELETE
-http.cors.allow-headers: X-Requested-With,X-Auth-Token,Content-Type,Content-Length
+http.cors.allow-headers: X-Requested-With, X-Auth-Token, Content-Type, Content-Length, Authorization, Access-Control-Allow-Headers, Accept
 http.cors.allow-credentials: true
 
 #Which origins to allow. 
