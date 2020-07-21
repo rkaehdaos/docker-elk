@@ -45,6 +45,11 @@ services:
         source: ./logstash/pipeline
         target: /usr/share/logstash/pipeline
         read_only: true
+      # MySql Connector Appended
+      - type: bind
+        source: ./logstash/MySQL_connector/mysql-connector-java-8.0.20.jar
+        target: /lib/mysql-connector-java-8.0.20.jar
+        read_only: true
       # TimeZone
       - type: bind
         source: /etc/localtime
