@@ -4,16 +4,16 @@ curl -XPUT http://localhost:9200/goods -d '
     "index": {
       "analysis": {
         "tokenizer": {
-          "tuukttak_nori_user_dict_tokenizer": {
+          "ttukttak_nori_user_dict_tokenizer": {
             "type": "nori_tokenizer",
             "decompound_mode": "mixed",
-            "user_dictionary": "userdict_ko.txt"
+            "user_dictionary": "userdic_ko.txt"
           }
         },
         "analyzer": {
           "ttukttak": {
             "type": "custom",
-            "tokenizer": "tuukttak_nori_user_dict_tokenizer"
+            "tokenizer": "ttukttak_nori_user_dict_tokenizer"
           }
         }
       }
