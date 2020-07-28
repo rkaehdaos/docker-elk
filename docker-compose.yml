@@ -15,6 +15,10 @@ services:
         source: ./elasticsearch/config/userdic_ko.txt
         target: /usr/share/elasticsearch/config/userdic_ko.txt
         read_only: true  
+      - type: bind
+        source: ./elasticsearch/plugin/javacafe-analyzer-6.4.3.zip
+        target: /usr/share/elasticsearch/plugin/javacafe-analyzer-6.4.3.zip
+        read_only: true  
       - type: volume
         source: elasticsearch
         target: /usr/share/elasticsearch/data
