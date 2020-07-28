@@ -3,10 +3,17 @@ curl -XPUT http://localhost:9200/goods -d '
   "settings": {
     "index": {
       "analysis": {
+        "tokenizer": {
+          "tuukttak_nori_user_dict_tokenizer": {
+            "type": "nori_tokenizer",
+            "decompound_mode": "mixed",
+            "user_dictionary": "userdict_ko.txt"
+          }
+        },
         "analyzer": {
           "ttukttak": {
-            "type": "nori",
-            "stopwords": "_korean_"
+            "type": "custom",
+            "tokenizer": "tuukttak_nori_user_dict_tokenizer"
           }
         }
       }
