@@ -4,13 +4,13 @@ ARG ELK_VERSION
 FROM docker.elastic.co/elasticsearch/elasticsearch:${ELK_VERSION}
 
 # copy custom plugin
-# ARG PLUGIN_FILE=plugin/*.zip
+ARG PLUGIN_FILE=plugin/*.zip
 # plugin/처럼 /로 끝나면 해당 폴더 생성 기대
-# COPY ${PLUGIN_FILE} /usr/share/elasticsearch/plugin/
+COPY ${PLUGIN_FILE} /usr/share/elasticsearch/plugin/
 
 # Add your elasticsearch plugins setup here
 # Example: RUN elasticsearch-plugin install analysis-icu
-# RUN elasticsearch-plugin install file:///usr/share/elasticsearch/plugin/javacafe-analyzer-7.8.0.zip
+RUN elasticsearch-plugin install file:///usr/share/elasticsearch/plugin/javacafe-analyzer-7.8.0.zip
 
 # https 잘안되면 밑의 방식 사용
 # sudo ES_JAVA_OPTS="-Djavax.net.ssl.trustStore=/path/to/trustStore.jks" bin/elasticsearch-plugin install https://host/plugin.zip
