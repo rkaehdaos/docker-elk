@@ -33,17 +33,17 @@ http.cors.allow-credentials: true
 # For example, using /https?:\/\/localhost(:[0-9]+)?/ would return 
 # the request header appropriately in both cases. Defaults to no origins allowed.
 
-
 #default
 # http.port : 9200
 # transport.tcp.port : 9300
+
+# 동적 스크립팅 기능 막
+# 에러나서 커멘트 처리
+# comment: script.disable_dynamic: false
+
 
 # 스키마리스 기능을 명시적으로 사용하지 않도록 한다.
 # - 자동 인덱스 생성 방지
 # action.auto_create_index: false
 # - 다 막으면 xpack-watcher가 작동안함
 action.auto_create_index: ".watches,.triggered_watches,.watcher-history-*,.monitoring-*"
-
-# 동적 스크립팅 기능 사용
-# 에러나서 커멘트 처리
-# script.disable_dynamic: false
