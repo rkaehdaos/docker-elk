@@ -46,4 +46,4 @@ action.auto_create_index: ".watches,.triggered_watches,.watcher-history-*,.monit
 
 # 동적 스크립팅 기능 사용
 # 에러나서 커멘트 처리
-script.disable_dynamic: false
+# script.disable_dynamic: false
