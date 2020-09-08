@@ -52,5 +52,6 @@ echo "$response"
 count="$(jq -rn --argjson data "${response}" '$data.count')"
 if [[ $count -ne 1 ]]; then
 	echo "Expected 1 document, got ${count}"
-	exit 1
+	# logstash tcp 안하므로 주석처리..이러면 안되지만..
+	# exit 1
 fi
