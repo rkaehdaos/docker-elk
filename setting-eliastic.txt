@@ -44,6 +44,15 @@ curl -XPUT http://localhost:9200/goods -d '
       "image": {
         "type": "keyword"
       },
+      "purchase_ea": {
+        "type": "long"
+      },
+      "review_count": {
+        "type": "long"
+      },
+      "regist_date": {
+        "type": "date"
+      },
       "keyword": {
         "type": "text",
         "analyzer": "ttukttak"
