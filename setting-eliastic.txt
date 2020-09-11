@@ -13,7 +13,8 @@ curl -XPUT http://localhost:9200/goods -d '
         "analyzer": {
           "ttukttak": {
             "type": "custom",
-            "tokenizer": "ttukttak_nori_user_dict_tokenizer"
+            "tokenizer": "ttukttak_nori_user_dict_tokenizer",
+            "filter": ["uppercase", "asciifolding"]
           }
         }
       }
