@@ -14,7 +14,21 @@ curl -XPUT http://localhost:9200/goods -d '
           "ttukttak": {
             "type": "custom",
             "tokenizer": "ttukttak_nori_user_dict_tokenizer",
-            "filter": ["uppercase", "asciifolding"]
+            "char_filter": [
+              "html_strip_char_filter"
+            ],
+            "filter": [
+              "uppercase",
+              "asciifolding"
+            ]
+          }
+        },
+        "char_filter": {
+          "html_strip_char_filter": {
+            "type": "html_strip",
+            "escaped_tags": [
+              
+            ]
           }
         }
       }
@@ -22,6 +36,12 @@ curl -XPUT http://localhost:9200/goods -d '
   },
   "mappings": {
     "properties": {
+      "@timestamp": {
+        "type": "date"
+      },
+      "@version": {
+        "type": "keyword"
+      },
       "default_consumer_price": {
         "type": "long"
       },
@@ -33,14 +53,14 @@ curl -XPUT http://localhost:9200/goods -d '
       },
       "goods_name": {
         "type": "text",
-        "analyzer": "ttukttak"
+        "analyzer": "ttukttak",
+        "similarity": "boolean"
       },
       "goods_seq": {
         "type": "long"
       },
       "goods_status": {
-        "type": "text",
-        "analyzer": "ttukttak"
+        "type": "keyword"
       },
       "image": {
         "type": "keyword"
@@ -56,7 +76,8 @@ curl -XPUT http://localhost:9200/goods -d '
       },
       "keyword": {
         "type": "text",
-        "analyzer": "ttukttak"
+        "analyzer": "standard",
+        "similarity": "boolean"
       },
       "sale_rate": {
         "type": "long"
