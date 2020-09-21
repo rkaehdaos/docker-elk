@@ -82,11 +82,15 @@ curl -XPUT http://localhost:9200/goods -d '
       "sale_rate": {
         "type": "long"
       },
-      "summary": {
+      "goods_category": {
         "type": "text",
-        "analyzer": "ttukttak"
+        "analyzer": "standard",
+        "similarity": "boolean"
+      },
+      "provider_name": {
+        "type": "keyword"
       }
     }
   }
 }
-' -H 'Content-Type: application/json' -H "Authorization: Basic `echo -n elastic:changeme | base64`"
+' -H 'Content-Type: application/json' -H "Authorization: Basic `echo -n elastic:elkttukttak | base64`"
