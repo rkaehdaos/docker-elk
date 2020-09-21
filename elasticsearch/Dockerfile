@@ -3,6 +3,9 @@ ARG ELK_VERSION
 # https://www.docker.elastic.co/
 FROM docker.elastic.co/elasticsearch/elasticsearch:${ELK_VERSION}
 
+# 패스워드 변경해보자.
+RUN echo "elkttukttak" | bin/elasticsearch-keystore add -xf bootstrap.password
+
 # copy custom plugin
 ARG PLUGIN_FILE=plugin/*.zip
 # plugin/처럼 /로 끝나면 해당 폴더 생성 기대
@@ -19,5 +22,3 @@ RUN elasticsearch-plugin list
 
 USER root
 RUN ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
-
-
