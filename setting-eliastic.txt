@@ -82,9 +82,10 @@ curl -XPUT http://localhost:9200/goods -d '
       "sale_rate": {
         "type": "long"
       },
-      "summary": {
+      "goods_category": {
         "type": "text",
-        "analyzer": "ttukttak"
+        "analyzer": "standard",
+        "similarity": "boolean"
       }
     }
   }
