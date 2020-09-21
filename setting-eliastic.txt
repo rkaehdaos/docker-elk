@@ -86,6 +86,9 @@ curl -XPUT http://localhost:9200/goods -d '
         "type": "text",
         "analyzer": "standard",
         "similarity": "boolean"
+      },
+      "provider_name": {
+        "type": "keyword"
       }
     }
   }
