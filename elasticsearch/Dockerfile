@@ -13,7 +13,7 @@ COPY ${PLUGIN_FILE} /usr/share/elasticsearch/plugin/
 
 # Add your elasticsearch plugins setup here
 # Example: RUN elasticsearch-plugin install analysis-icu
-RUN elasticsearch-plugin install file:///usr/share/elasticsearch/plugin/javacafe-analyzer-7.8.0.zip
+RUN elasticsearch-plugin install file:///usr/share/elasticsearch/plugin/javacafe-analyzer-7.9.1.zip
 
 # https 잘안되면 밑의 방식 사용
 # sudo ES_JAVA_OPTS="-Djavax.net.ssl.trustStore=/path/to/trustStore.jks" bin/elasticsearch-plugin install https://host/plugin.zip

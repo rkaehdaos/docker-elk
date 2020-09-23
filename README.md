@@ -1,5 +1,5 @@
 # Elastic stack (ELK) on Docker
-[![Elastic Stack version](https://img.shields.io/badge/ELK-7.8.0-blue.svg?style=flat)]
+[![Elastic Stack version](https://img.shields.io/badge/ELK-7.9.1-blue.svg?style=flat)](https://github.com/rkaehdaos/docker-elk/issues/5)
 [![Build Status](https://travis-ci.com/rkaehdaos/docker-elk.svg?token=9bY9HsFzhpAVyMeNLVvy&branch=master)](https://travis-ci.com/github/rkaehdaos/docker-elk)
 
 ## Sumarry
