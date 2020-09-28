@@ -27,7 +27,6 @@ curl -XPUT http://localhost:9200/goods -d '
           "html_strip_char_filter": {
             "type": "html_strip",
             "escaped_tags": [
-              
             ]
           }
         }
@@ -82,10 +81,13 @@ curl -XPUT http://localhost:9200/goods -d '
       "sale_rate": {
         "type": "long"
       },
-      "goods_category": {
+      "goods_categoryname": {
         "type": "text",
         "analyzer": "standard",
         "similarity": "boolean"
+      },
+      "goods_cateorycode": {
+        "type": "keyword"
       },
       "provider_name": {
         "type": "keyword"
