@@ -106,12 +106,6 @@ curl -XPUT http://localhost:9200/goods -d '
       "reserve_policy": {
         "type": "keyword"
       },
-      "brand_category_code": {
-        "type": "keyword"
-      },
-      "brand_name": {
-        "type": "keyword"
-      },
       "page_view": {
         "type": "long"
       }
