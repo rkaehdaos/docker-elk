@@ -74,22 +74,42 @@ curl -XPUT http://localhost:9200/goods -d '
         "type": "date"
       },
       "keyword": {
-        "type": "text",
-        "analyzer": "standard",
-        "similarity": "boolean"
+        "type": "keyword"
       },
       "sale_rate": {
         "type": "long"
       },
       "goods_categoryname": {
-        "type": "text",
-        "analyzer": "standard",
-        "similarity": "boolean"
+        "type": "keyword"
       },
       "goods_cateorycode": {
         "type": "keyword"
       },
       "provider_name": {
+        "type": "keyword"
+      },
+      "summary": {
+        "type": "keyword"
+      },
+      "free_shipping_use": {
+        "type": "keyword"
+      },
+      "default_reserve_percent": {
+        "type": "double"
+      },
+      "reserve_rate": {
+        "type": "double"
+      },
+      "reserve_unit": {
+        "type": "keyword"
+      },
+      "reserve_policy": {
+        "type": "keyword"
+      },
+      "brand_category_code": {
+        "type": "keyword"
+      },
+      "brand_name": {
         "type": "keyword"
       },
       "page_view": {
