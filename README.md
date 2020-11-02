@@ -8,3 +8,7 @@
 - Docker-compose로 구성하고 서로 depend 하고 있음
 - password 부분은 Travis CI 쪽에서 바꿔치는 부분 생각중
 - test 부분도 만들고 있음
+
+
+20.11.02
+- 이제 거의 쓸만해짐
