@@ -112,6 +112,9 @@ curl -XPUT http://localhost:9200/goods -d '
       "brand_name": {	
         "type": "keyword"	
       },
+      "ranking_point": {
+        "type": "long"
+      },
       "page_view": {
         "type": "long"
       }
