@@ -147,8 +147,7 @@ curl -XPUT http://localhost:9200/goods -d '
       },
       "estimate": {
         "type": "integer"
-      },
-      
+      }
     }
   }
 }
