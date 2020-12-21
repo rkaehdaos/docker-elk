@@ -42,13 +42,13 @@ curl -XPUT http://localhost:9200/goods -d '
         "type": "keyword"
       },
       "default_consumer_price": {
-        "type": "long"
+        "type": "integer"
       },
       "default_discount": {
-        "type": "long"
+        "type": "integer"
       },
       "default_price": {
-        "type": "long"
+        "type": "integer"
       },
       "goods_name": {
         "type": "text",
@@ -56,7 +56,7 @@ curl -XPUT http://localhost:9200/goods -d '
         "similarity": "boolean"
       },
       "goods_seq": {
-        "type": "long"
+        "type": "integer"
       },
       "goods_status": {
         "type": "keyword"
@@ -65,10 +65,10 @@ curl -XPUT http://localhost:9200/goods -d '
         "type": "keyword"
       },
       "purchase_ea": {
-        "type": "long"
+        "type": "integer"
       },
       "review_count": {
-        "type": "long"
+        "type": "integer"
       },
       "regist_date": {
         "type": "date"
@@ -77,7 +77,7 @@ curl -XPUT http://localhost:9200/goods -d '
         "type": "keyword"
       },
       "sale_rate": {
-        "type": "long"
+        "type": "double"
       },
       "goods_categoryname": {
         "type": "keyword"
@@ -116,8 +116,39 @@ curl -XPUT http://localhost:9200/goods -d '
         "type": "long"
       },
       "page_view": {
-        "type": "long"
-      }
+        "type": "integer"
+      },
+      "goods_type_sub": {
+        "type": "keyword"
+      },
+      "benefits_txt": {
+        "type": "keyword"
+      },
+      "style": {
+        "type": "keyword"
+      },
+      "color": {
+        "type": "keyword"
+      },
+      "dwelling_type1": {
+        "type": "keyword"
+      },
+      "dwelling_type2": {
+        "type": "keyword"
+      },
+      "supply_area": {
+        "type": "keyword"
+      },
+      "expand_type": {
+        "type": "keyword"
+      },
+      "partial_construction": {
+        "type": "keyword"
+      },
+      "estimate": {
+        "type": "integer"
+      },
+      
     }
   }
 }
