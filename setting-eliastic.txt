@@ -61,6 +61,9 @@ curl -XPUT http://localhost:9200/goods -d '
       "goods_status": {
         "type": "keyword"
       },
+      "goods_view": {
+        "type": "keyword"
+      },
       "image": {
         "type": "keyword"
       },
