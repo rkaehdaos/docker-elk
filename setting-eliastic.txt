@@ -91,6 +91,9 @@ curl -XPUT http://localhost:9200/goods -d '
       "provider_name": {
         "type": "keyword"
       },
+      "provider_seq": {
+        "type": "integer"
+      },
       "summary": {
         "type": "keyword"
       },
