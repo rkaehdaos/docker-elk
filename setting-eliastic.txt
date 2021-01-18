@@ -154,9 +154,6 @@ curl -XPUT http://localhost:9200/goods -d '
       "estimate": {
         "type": "integer"
       },
-      "partial_construction": {
-        "type": "keyword"
-      },
       "color_pick": {
         "type": "keyword"
       },
