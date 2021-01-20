@@ -173,7 +173,7 @@ curl -XPUT http://localhost:9200/goods -d '
         "type": "integer"
       },
       "provider_id": {
-        "type": "integer"
+        "type": "keyword"
       }
     }
   }
