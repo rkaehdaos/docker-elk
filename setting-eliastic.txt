@@ -171,6 +171,9 @@ curl -XPUT http://localhost:9200/goods -d '
       },
       "pgroup_seq": {
         "type": "integer"
+      },
+      "provider_id": {
+        "type": "integer"
       }
     }
   }
