@@ -85,7 +85,7 @@ curl -XPUT http://localhost:9200/goods -d '
       "goods_categoryname": {
         "type": "keyword"
       },
-      "goods_cateorycode": {
+      "goods_categorycode": {
         "type": "keyword"
       },
       "provider_name": {
