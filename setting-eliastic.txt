@@ -121,6 +121,9 @@ curl -XPUT http://localhost:9200/goods -d '
       "ranking_point": {
         "type": "long"
       },
+      "shipping_group_seq": {
+        "type": "long"
+      },
       "page_view": {
         "type": "integer"
       },
