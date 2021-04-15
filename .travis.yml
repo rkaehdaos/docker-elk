@@ -2,7 +2,10 @@ language: minimal
 services: docker
 
 env:
-  - DOCKER_COMPOSE_VERSION=1.27.2
+  - DOCKER_COMPOSE_VERSION=1.29.1
+  
+notifications:
+  slack: rkaehdaos:wPhSVIqM14VNeq09LFsuSJcA  
 
 before_install:
   - sudo apt-get update
