@@ -1,8 +1,11 @@
+notifications:
+  slack: __SLACK__TOKEN__
+  
 language: minimal
 services: docker
 
 env:
-  - DOCKER_COMPOSE_VERSION=1.27.2
+  - DOCKER_COMPOSE_VERSION=1.29.2
 
 before_install:
   - sudo apt-get update
@@ -66,17 +69,17 @@ script:
       down -v
 
   # Swarm
-  - docker swarm init
-  - docker stack deploy -c ./docker-stack.yml elk
-  - docker service scale elk_kibana=0 --detach=false
-  - docker service scale elk_logstash=0 --detach=false
-  - sleep 40
-  - .travis/elasticsearch-setup-passwords.exp swarm
-  - docker service scale elk_kibana=1 --detach=false
-  - docker service scale elk_logstash=1 --detach=false
-  - .travis/run-tests-core.sh swarm
-  - docker stack services elk
-  - docker service logs elk_elasticsearch
-  - docker service logs elk_kibana
-  - docker service logs elk_logstash
-  - docker stack rm elk
+  # - docker swarm init
+  # - docker stack deploy -c ./docker-stack.yml elk
+  # - docker service scale elk_kibana=0 --detach=false
+  # - docker service scale elk_logstash=0 --detach=false
+  # - sleep 40
+  # - .travis/elasticsearch-setup-passwords.exp swarm
+  # - docker service scale elk_kibana=1 --detach=false
+  # - docker service scale elk_logstash=1 --detach=false
+  # - .travis/run-tests-core.sh swarm
+  # - docker stack services elk
+  # - docker service logs elk_elasticsearch
+  # - docker service logs elk_kibana
+  # - docker service logs elk_logstash
+  # - docker stack rm elk
